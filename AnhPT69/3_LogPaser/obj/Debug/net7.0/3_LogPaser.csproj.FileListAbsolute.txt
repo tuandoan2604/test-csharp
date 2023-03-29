@@ -1,0 +1,15 @@
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\bin\Debug\net7.0\3_LogPaser.exe
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\bin\Debug\net7.0\3_LogPaser.deps.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\bin\Debug\net7.0\3_LogPaser.runtimeconfig.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\bin\Debug\net7.0\3_LogPaser.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\bin\Debug\net7.0\3_LogPaser.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\refint\3_LogPaser.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\3_LogPaser.genruntimeconfig.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\3_LogPaser\obj\Debug\net7.0\ref\3_LogPaser.dll

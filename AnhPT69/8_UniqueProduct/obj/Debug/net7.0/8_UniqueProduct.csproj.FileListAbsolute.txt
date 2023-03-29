@@ -1,0 +1,15 @@
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\bin\Debug\net7.0\8_UniqueProduct.exe
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\bin\Debug\net7.0\8_UniqueProduct.deps.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\bin\Debug\net7.0\8_UniqueProduct.runtimeconfig.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\bin\Debug\net7.0\8_UniqueProduct.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\bin\Debug\net7.0\8_UniqueProduct.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\refint\8_UniqueProduct.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\8_UniqueProduct.genruntimeconfig.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\8_UniqueProduct\obj\Debug\net7.0\ref\8_UniqueProduct.dll

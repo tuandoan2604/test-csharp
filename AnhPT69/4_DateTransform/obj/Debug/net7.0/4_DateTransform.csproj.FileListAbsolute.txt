@@ -1,0 +1,15 @@
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\bin\Debug\net7.0\4_DateTransform.exe
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\bin\Debug\net7.0\4_DateTransform.deps.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\bin\Debug\net7.0\4_DateTransform.runtimeconfig.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\bin\Debug\net7.0\4_DateTransform.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\bin\Debug\net7.0\4_DateTransform.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\refint\4_DateTransform.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\4_DateTransform.genruntimeconfig.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\4_DateTransform\obj\Debug\net7.0\ref\4_DateTransform.dll

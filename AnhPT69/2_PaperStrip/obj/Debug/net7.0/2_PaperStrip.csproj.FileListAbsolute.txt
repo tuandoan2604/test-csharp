@@ -1,0 +1,15 @@
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\bin\Debug\net7.0\2_PaperStrip.exe
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\bin\Debug\net7.0\2_PaperStrip.deps.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\bin\Debug\net7.0\2_PaperStrip.runtimeconfig.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\bin\Debug\net7.0\2_PaperStrip.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\bin\Debug\net7.0\2_PaperStrip.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\refint\2_PaperStrip.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\2_PaperStrip.genruntimeconfig.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\2_PaperStrip\obj\Debug\net7.0\ref\2_PaperStrip.dll

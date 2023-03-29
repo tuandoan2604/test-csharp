@@ -1,0 +1,15 @@
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\bin\Debug\net7.0\9_InternalNodes.exe
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\bin\Debug\net7.0\9_InternalNodes.deps.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\bin\Debug\net7.0\9_InternalNodes.runtimeconfig.json
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\bin\Debug\net7.0\9_InternalNodes.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\bin\Debug\net7.0\9_InternalNodes.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\refint\9_InternalNodes.dll
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.pdb
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\9_InternalNodes.genruntimeconfig.cache
+C:\Users\HP\Source\Repos\anhphtuann\test-csharp\AnhPT69\9_InternalNodes\obj\Debug\net7.0\ref\9_InternalNodes.dll

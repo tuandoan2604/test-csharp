@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\MyExercise\DateTransform\bin\Debug\net7.0\DateTransform.exe
+C:\Users\HP\Documents\MyExercise\DateTransform\bin\Debug\net7.0\DateTransform.deps.json
+C:\Users\HP\Documents\MyExercise\DateTransform\bin\Debug\net7.0\DateTransform.runtimeconfig.json
+C:\Users\HP\Documents\MyExercise\DateTransform\bin\Debug\net7.0\DateTransform.dll
+C:\Users\HP\Documents\MyExercise\DateTransform\bin\Debug\net7.0\DateTransform.pdb
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.AssemblyInfo.cs
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.dll
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\refint\DateTransform.dll
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.pdb
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\DateTransform.genruntimeconfig.cache
+C:\Users\HP\Documents\MyExercise\DateTransform\obj\Debug\net7.0\ref\DateTransform.dll

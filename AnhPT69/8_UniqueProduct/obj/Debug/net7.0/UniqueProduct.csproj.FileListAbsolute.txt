@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\MyExercise\UniqueProduct\bin\Debug\net7.0\UniqueProduct.exe
+C:\Users\HP\Documents\MyExercise\UniqueProduct\bin\Debug\net7.0\UniqueProduct.deps.json
+C:\Users\HP\Documents\MyExercise\UniqueProduct\bin\Debug\net7.0\UniqueProduct.runtimeconfig.json
+C:\Users\HP\Documents\MyExercise\UniqueProduct\bin\Debug\net7.0\UniqueProduct.dll
+C:\Users\HP\Documents\MyExercise\UniqueProduct\bin\Debug\net7.0\UniqueProduct.pdb
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.AssemblyInfo.cs
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.dll
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\refint\UniqueProduct.dll
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.pdb
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\UniqueProduct.genruntimeconfig.cache
+C:\Users\HP\Documents\MyExercise\UniqueProduct\obj\Debug\net7.0\ref\UniqueProduct.dll

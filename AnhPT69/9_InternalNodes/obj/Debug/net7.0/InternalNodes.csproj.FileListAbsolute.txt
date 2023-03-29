@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\MyExercise\InternalNodes\bin\Debug\net7.0\InternalNodes.exe
+C:\Users\HP\Documents\MyExercise\InternalNodes\bin\Debug\net7.0\InternalNodes.deps.json
+C:\Users\HP\Documents\MyExercise\InternalNodes\bin\Debug\net7.0\InternalNodes.runtimeconfig.json
+C:\Users\HP\Documents\MyExercise\InternalNodes\bin\Debug\net7.0\InternalNodes.dll
+C:\Users\HP\Documents\MyExercise\InternalNodes\bin\Debug\net7.0\InternalNodes.pdb
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.AssemblyInfo.cs
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.dll
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\refint\InternalNodes.dll
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.pdb
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\InternalNodes.genruntimeconfig.cache
+C:\Users\HP\Documents\MyExercise\InternalNodes\obj\Debug\net7.0\ref\InternalNodes.dll
