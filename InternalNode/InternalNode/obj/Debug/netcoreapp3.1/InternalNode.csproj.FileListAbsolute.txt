@@ -1,0 +1,14 @@
+E:\C#Fsoft\InternalNode\InternalNode\bin\Debug\netcoreapp3.1\InternalNode.exe
+E:\C#Fsoft\InternalNode\InternalNode\bin\Debug\netcoreapp3.1\InternalNode.deps.json
+E:\C#Fsoft\InternalNode\InternalNode\bin\Debug\netcoreapp3.1\InternalNode.runtimeconfig.json
+E:\C#Fsoft\InternalNode\InternalNode\bin\Debug\netcoreapp3.1\InternalNode.runtimeconfig.dev.json
+E:\C#Fsoft\InternalNode\InternalNode\bin\Debug\netcoreapp3.1\InternalNode.dll
+E:\C#Fsoft\InternalNode\InternalNode\bin\Debug\netcoreapp3.1\InternalNode.pdb
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.csproj.AssemblyReference.cache
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.AssemblyInfoInputs.cache
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.AssemblyInfo.cs
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.csproj.CoreCompileInputs.cache
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.dll
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.pdb
+E:\C#Fsoft\InternalNode\InternalNode\obj\Debug\netcoreapp3.1\InternalNode.genruntimeconfig.cache

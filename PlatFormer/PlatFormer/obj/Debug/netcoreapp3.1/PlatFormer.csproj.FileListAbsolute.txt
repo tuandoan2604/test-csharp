@@ -1,0 +1,14 @@
+E:\C#Fsoft\PlatFormer\PlatFormer\bin\Debug\netcoreapp3.1\PlatFormer.exe
+E:\C#Fsoft\PlatFormer\PlatFormer\bin\Debug\netcoreapp3.1\PlatFormer.deps.json
+E:\C#Fsoft\PlatFormer\PlatFormer\bin\Debug\netcoreapp3.1\PlatFormer.runtimeconfig.json
+E:\C#Fsoft\PlatFormer\PlatFormer\bin\Debug\netcoreapp3.1\PlatFormer.runtimeconfig.dev.json
+E:\C#Fsoft\PlatFormer\PlatFormer\bin\Debug\netcoreapp3.1\PlatFormer.dll
+E:\C#Fsoft\PlatFormer\PlatFormer\bin\Debug\netcoreapp3.1\PlatFormer.pdb
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.csproj.AssemblyReference.cache
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.AssemblyInfoInputs.cache
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.AssemblyInfo.cs
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.csproj.CoreCompileInputs.cache
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.dll
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.pdb
+E:\C#Fsoft\PlatFormer\PlatFormer\obj\Debug\netcoreapp3.1\PlatFormer.genruntimeconfig.cache
