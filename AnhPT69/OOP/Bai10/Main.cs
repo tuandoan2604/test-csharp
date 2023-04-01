@@ -11,3 +11,4 @@ VanBan vb = new VanBan(st);
 Console.WriteLine(vb.DemSoTu());
 Console.WriteLine(vb.DemKyTu("A"));
 Console.WriteLine(vb.ChuanHoa());
+//ket thuc
