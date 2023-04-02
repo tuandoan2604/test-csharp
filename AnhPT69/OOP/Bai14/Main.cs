@@ -1,4 +1,4 @@
-﻿/*
+
 using System.Text;
 using UniNS;
 
@@ -50,4 +50,3 @@ string NhapLieu(string mes)
 
 
 
-*/
