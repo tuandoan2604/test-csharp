@@ -1,4 +1,4 @@
-﻿/*
+
 using System.Text;
 using PTGTNS;
 
@@ -57,4 +57,3 @@ string NhapLieu(string mes)
 
 
 
-*/
