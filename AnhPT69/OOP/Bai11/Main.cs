@@ -1,4 +1,4 @@
-﻿/*using System.Text;
+using System.Text;
 using SoPhucNS;
 
 Console.OutputEncoding = Encoding.Unicode;
@@ -20,4 +20,4 @@ result.HienThiSoPhuc();
 Thread.Sleep(TimeSpan.FromSeconds(5));
 result = x * y;
 result.HienThiSoPhuc();
-Console.ReadKey();*/
+Console.ReadKey();
