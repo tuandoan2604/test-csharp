@@ -1,4 +1,4 @@
-﻿/*
+
 using System.Text;
 using CompanyNS;
 
@@ -108,4 +108,3 @@ string NhapLieu(string mes)
 
 
 
-*/
