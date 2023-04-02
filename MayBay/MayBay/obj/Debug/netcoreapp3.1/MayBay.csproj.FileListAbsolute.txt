@@ -1,0 +1,14 @@
+E:\C#Fsoft\MayBay\MayBay\bin\Debug\netcoreapp3.1\MayBay.exe
+E:\C#Fsoft\MayBay\MayBay\bin\Debug\netcoreapp3.1\MayBay.deps.json
+E:\C#Fsoft\MayBay\MayBay\bin\Debug\netcoreapp3.1\MayBay.runtimeconfig.json
+E:\C#Fsoft\MayBay\MayBay\bin\Debug\netcoreapp3.1\MayBay.runtimeconfig.dev.json
+E:\C#Fsoft\MayBay\MayBay\bin\Debug\netcoreapp3.1\MayBay.dll
+E:\C#Fsoft\MayBay\MayBay\bin\Debug\netcoreapp3.1\MayBay.pdb
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.csproj.AssemblyReference.cache
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.AssemblyInfoInputs.cache
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.AssemblyInfo.cs
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.csproj.CoreCompileInputs.cache
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.dll
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.pdb
+E:\C#Fsoft\MayBay\MayBay\obj\Debug\netcoreapp3.1\MayBay.genruntimeconfig.cache
