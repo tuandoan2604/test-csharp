@@ -19,7 +19,7 @@ while (command != 6)
     Console.WriteLine("Nhấn 5 để tính tiền điện");
     Console.WriteLine("Nhấn 6 để thoát");
     command = int.Parse(Console.ReadLine());
-    if (command > 6 && command < 1)
+    if (command > 6 || command < 1)
     {
         Console.WriteLine("Bạn đã nhập sai, hãy nhập lại");
         continue;

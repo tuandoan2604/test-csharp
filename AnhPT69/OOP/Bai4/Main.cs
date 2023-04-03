@@ -17,7 +17,7 @@ while (command != 3)
     Console.WriteLine("Nhấn 2 để hiện thông tin");
     Console.WriteLine("Nhấn 3 để thoát");
     command = int.Parse(Console.ReadLine());
-    if (command > 3 && command < 1)
+    if (command > 3 || command < 1)
     {
         Console.WriteLine("Bạn đã nhập sai, hãy nhập lại");
         continue;

@@ -18,7 +18,7 @@ while (command != 5)
     Console.WriteLine("Nhấn 4 để tính lương thưởng");
     Console.WriteLine("Nhấn 5 để thoát");
     command = int.Parse(Console.ReadLine());
-    if (command > 5 && command < 1)
+    if (command > 5 || command < 1)
     {
         Console.WriteLine("Bạn đã nhập sai, hãy nhập lại");
         continue;

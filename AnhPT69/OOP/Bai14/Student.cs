@@ -19,7 +19,7 @@ namespace UniNS
         public string gradeLevel { set; get; }
         public Student() { }
         public abstract void ShowMyInfo();
-        public abstract void EnterStudent();
+        public abstract void EnterStudent(string gradelevel);
         public void ShowGeneral()
         {
             ShowScren("Fullname", fullName);
@@ -29,7 +29,7 @@ namespace UniNS
             ShowScren("Universiry Name", universityName);
             ShowScren("Grade Level", gradeLevel);
         }
-        public void EnterGeneral()
+        public void EnterGeneral(string gradelevel)
         {
             ExceptionFullName();
             ExceptionDOB();
@@ -38,7 +38,7 @@ namespace UniNS
             {  */
             sex = EnterData("sex");
             universityName = EnterData("university name");
-            gradeLevel = EnterData("grade level");
+            gradeLevel = gradelevel;
             /*}
             catch (Exception e) 
             {
@@ -48,19 +48,19 @@ namespace UniNS
         }
         private void ExceptionFullName()
         {
-            try
-            {
+            /*try
+            {*/
                 fullName = EnterData("fullname");
                 if (fullName.Length < 10 && fullName.Length < 50)
                 {
                     fullName = "";
                     throw new Exception("Invalid fullname length");
                 }
-            }
-            catch (Exception ex)
+            /*}
+            catch
             {
-                Console.WriteLine(ex.Message);
-            }
+                //Console.WriteLine(ex.Message);
+            }*/
         }
         private void ExceptionDOB()
         {
@@ -72,13 +72,13 @@ namespace UniNS
             catch (FormatException)
             {
                 doB = "";
-                throw new Exception("Invalid birthday format \"dd/MM/yyyy\"");
+                throw new Exception("Invalid birthday format \"dd/MM/yyyy\"");   
             }
         }
         private void ExceptionPhoneNumber()
         {
-            try
-            {
+            /*try
+            {*/
                 phoneNumber = EnterData("phone number");
 
                 if (!Regex.IsMatch(phoneNumber, @"^(090|098|091|031|035|038)\d{7}$"))
@@ -86,12 +86,11 @@ namespace UniNS
                     phoneNumber = "";
                     throw new Exception("Invalid phone number format");
                 }
-                Console.WriteLine("Số điện thoại hợp lệ.");
-            }
-            catch (Exception ex)
+            /*}
+            catch 
             {
-                Console.WriteLine(ex.Message);
-            }
+                //Console.WriteLine(ex.Message);
+            }*/
         }
     }
     class GoodStudent : Student
@@ -118,10 +117,11 @@ namespace UniNS
             ShowScren("Best Reward Name", bestRewardName);
         }
 
-        public override void EnterStudent()
+        public override void EnterStudent(string gradelevel)
         {
-            EnterGeneral();
-
+            EnterGeneral(gradelevel);
+            gpa = double.Parse(EnterData("gpa"));
+            bestRewardName = EnterData("best reward name");
         }
     }
     class NormalStudent : Student
@@ -148,9 +148,11 @@ namespace UniNS
             ShowScren("Entry Test Score", entryTestScore.ToString());
         }
 
-        public override void EnterStudent()
+        public override void EnterStudent(string gradelevel)
         {
-            throw new NotImplementedException();
+            EnterGeneral(gradelevel);
+            englishScore = int.Parse(EnterData("english score"));
+            entryTestScore = double.Parse(EnterData("entry test score"));
         }
     }
     class Recruit
@@ -160,27 +162,48 @@ namespace UniNS
         {
             students = new List<Student>()
             {
-                new GoodStudent("Anh", "2000/12/23", "Male", "0905837459", "BK", "Good", 2.5, "No"),
-                new GoodStudent("Ba", "2000/4/14", "Male", "0980483641", "HN", "Good", 2.55, "No"),
-                new NormalStudent("Le", "2000/7/17", "Female", "0385837115", "BK", "Normal", 560, 7.9),
-                new NormalStudent("Thao", "2000/9/11", "Female", "0385137169", "BK", "Normal", 590, 6.8),
-                new GoodStudent("Huyen", "2000/12/24", "Female", "0915826459", "BK", "Good", 2.58, "No"),
-                new GoodStudent("Chien", "2000/11/25", "Male", "0905885459", "BK", "Good", 2.59, "No"),
-                new NormalStudent("Hai", "2000/2/15", "Male", "0355837169", "BK", "Normal", 550, 7.8),
-                new NormalStudent("Uyen", "2000/8/31", "Female", "0381537169", "BK", "Normal", 650, 9.8),                
-                new NormalStudent("Bao", "2000/3/11", "Male", "0909037169", "BK", "Normal", 550, 7.8),
-                new NormalStudent("Dao", "2000/12/10", "Male", "0901437169", "BK", "Normal", 550, 7.8),
-                new GoodStudent("Hung", "2000/1/17", "Male", "0905837169", "BK", "Good", 2.98, "No"),
-                new GoodStudent("Dat", "2000/2/10", "Male", "0904237459", "BK", "Good", 2.98, "No"),
-                new NormalStudent("Hau", "2000/6/27", "Male", "0909137169", "BK", "Normal", 350, 7.8),
-                new GoodStudent("Yen", "2000/3/23", "Male", "0905833659", "BK", "Good", 2.76, "No"),
-                new GoodStudent("Chinh", "2000/2/26", "Female", "0915893459", "BK", "Good", 2.90, "No"),
-                new GoodStudent("Trang", "2000/6/3", "Female", "0985831559", "BK", "Good", 2.90, "No"),
-                new GoodStudent("An", "2000/12/23", "Female", "0315517459", "BK", "Good", 2.83, "No"),
-                new GoodStudent("Bac", "2000/9/13", "Female", "0315518759", "BK", "Good", 2.83, "No"),
-                new GoodStudent("Chien", "2000/2/15", "Female", "0315517959", "BK", "Good", 2.55, "No"),
-                new GoodStudent("Anh", "2000/1/19", "Male", "0315512559", "BK", "Good", 2.91, "No"),
+                new GoodStudent("Anh", "23/12/2000", "Male", "0905837459", "BK", "Good", 2.5, "No"),
+                new NormalStudent("Le", "17/7/2000", "Female", "0385837115", "BK", "Normal", 560, 9.8),
+                new NormalStudent("Thao", "11/9/2000", "Female", "0385137169", "BK", "Normal", 590, 6.8),
+                new GoodStudent("Huyen", "24/12/2000", "Female", "0915826459", "BK", "Good", 2.58, "No"),
+                new GoodStudent("Chien", "25/11/2000", "Male", "0905885459", "BK", "Good", 2.59, "No"),
+                new NormalStudent("Hai", "15/2/2000", "Male", "0355837169", "BK", "Normal", 550, 7.8),
+                new NormalStudent("Uyen", "31/8/2000", "Female", "0381537169", "BK", "Normal", 650, 9.8),                
+                new NormalStudent("Bao", "11/3/2000", "Male", "0909037169", "BK", "Normal", 750, 7.8),
+                new NormalStudent("Dao", "10/12/2000", "Male", "0901437169", "BK", "Normal", 550, 7.8),
+                new GoodStudent("Hung", "17/1/2000", "Male", "0905837169", "BK", "Good", 2.98, "No"),
+                new GoodStudent("Dat", "10/2/2000", "Male", "0904237459", "BK", "Good", 2.98, "No"),
+                new NormalStudent("Hau", "27/6/2000", "Male", "0909137169", "BK", "Normal", 350, 7.8),
+                new GoodStudent("Yen", "23/3/2000", "Male", "0905833659", "BK", "Good", 2.76, "No"),
+                new GoodStudent("Chinh", "26/2/2000", "Female", "0915893459", "BK", "Good", 2.90, "No"),
+                new GoodStudent("Trang", "3/6/2000", "Female", "0985831559", "BK", "Good", 2.90, "No"),
+                new GoodStudent("An", "23/12/2000", "Female", "0315517459", "BK", "Good", 2.83, "No"),
+                new GoodStudent("Bac", "13/9/2000", "Female", "0315518759", "BK", "Good", 2.83, "No"),
+                new GoodStudent("Chien", "15/2/2000", "Female", "0315517959", "BK", "Good", 2.55, "No"),
+                new GoodStudent("Anh", "19/1/2000", "Male", "0315512559", "BK", "Good", 2.91, "No"),
             };
+        }
+        public void NewStudent()
+        {
+            string gradelevel = EnterData("grade level (Good/Normal)");
+            if (gradelevel == "Good") 
+            {
+                GoodStudent gstd = new GoodStudent();
+                gstd.EnterStudent(gradelevel);
+
+                students.Add(gstd);
+            }
+            else if (gradelevel == "Normal")
+            {
+                NormalStudent nstd = new NormalStudent();
+                nstd.EnterStudent(gradelevel);
+
+                students.Add(nstd);
+            }
+            else 
+            {
+                Console.WriteLine("Wrong, please try again");
+            }
         }
         public void ShowInfoName()
         {
@@ -229,8 +252,9 @@ namespace UniNS
 
                 for (int i = 0; i < number; i++)
                 {
+                    id++;
                     Student temp = glist[i];
-                    Console.WriteLine($"Fullname: {temp.fullName} | GPA: {glist[i].gpa}");
+                    Console.WriteLine($"id: {id} | Fullname: {temp.fullName} | GPA: {glist[i].gpa}");
                 }
             }
             else

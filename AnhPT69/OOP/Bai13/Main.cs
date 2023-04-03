@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using System.Text;
 using CompanyNS;
 
@@ -51,7 +51,7 @@ while (command != 8)
     Console.WriteLine("Nhấn 7 để hiển thị intern");
     Console.WriteLine("Nhấn 8 để thoát");
     command = int.Parse(Console.ReadLine());
-    if (command > 8 && command < 1)
+    if (command > 8 || command < 1)
     {
         Console.WriteLine("Bạn đã nhập sai, hãy nhập lại");
         continue;
@@ -98,6 +98,7 @@ while (command != 8)
             { }
             break;
     }
+    if (command != 8) { Console.ReadLine(); }
 }
 
 string NhapLieu(string mes)
@@ -108,4 +109,3 @@ string NhapLieu(string mes)
 
 
 
-*/

@@ -1,5 +1,4 @@
-﻿using CanBoNS;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -9,7 +8,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using static CompanyNS.Tool;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CompanyNS
 {
