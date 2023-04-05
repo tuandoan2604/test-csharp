@@ -6,15 +6,15 @@ using System.Runtime.Serialization;
 int[] original = new int[] { 1, 4, 3, 2, 5, 6};
 int[] desired = new int[] { 1, 2, 5, 4, 3, 6};
 
-PaperStrip.MinPieces(original, desired);
-Console.ReadLine();
+Console.WriteLine(PaperStrip.MinPieces(original, desired));
 
 public class PaperStrip
 {
-    public static void MinPieces(int[] original, int[] desired)
+    public static int MinPieces(int[] original, int[] desired)
     {
         int i = 0, j = 0;
         int n = original.Length;
+        int m = n;
         List<string> pieces = new List<string>();
 
         for (i = 0; i < n; i++)
@@ -30,7 +30,7 @@ public class PaperStrip
                         i++;
                         j++;
                     }
-                    while ((i < n) && (j <= n) && (original[i] == desired[j]));
+                    while ((i < n) && (j < n) && (original[i] == desired[j]));
 
                     i--;
                     pieces.Add(str);
@@ -38,13 +38,9 @@ public class PaperStrip
                 }
                 
             }
-        }
-        Console.WriteLine($"Number of pieces: {pieces.Count}");
+        }        
+        return pieces.Count;
 
-        /*foreach (string str in pieces) 
-        {
-            Console.WriteLine(str);
-        }*/
     }
     
     
