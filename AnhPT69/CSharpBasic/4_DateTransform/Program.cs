@@ -1,99 +1,41 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-
-var input = new List<string> { "2010/02/20", "19/12/2016", "11-18-2012", "20130720" };
-DateTransform.TransformDateFormat(input).ForEach(Console.WriteLine);
-Console.ReadLine();
+﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class DateTransform
 {
     public static List<string> TransformDateFormat(List<string> dates)
     {
-        string str = "";
-        List<int> nchar = new List<int> { };
-        List<string> output = new List<string>();
-        int n = dates.Count;
+        List<string> result = new List<string>();
 
-        string strpl1 = "", strpl2 = "", strpl3 = "";
-         
+        var regex1 = new Regex(@"^(\d{4})(/|-)(0[1-9]|1[0-2])(/|-)(0[1-9]|[1-2][0-9]|3[0-1])$"); // Matches "yyyy/MM/dd"
+        var regex2 = new Regex(@"^(0[1-9]|[1-2][0-9]|3[0-1])(/|-)(0[1-9]|1[0-2])(/|-)(\d{4})$"); // Matches "dd/MM/yyyy"
+        var regex3 = new Regex(@"^(0[1-9]|1[0-2])(/|-)(0[1-9]|[1-2][0-9]|3[0-1])(/|-)(\d{4})$"); // Matches "MM/dd/yyyy"
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < dates.Count; i++)
         {
-            str = dates[i];
+            var match1 = regex1.Match(dates[i]);
+            var match2 = regex2.Match(dates[i]);
+            var match3 = regex3.Match(dates[i]);
 
-            for (int j = 0; j < str.Length; j++)
+            if (match1.Success)
             {
-                if (!char.IsDigit(str[j]))
-                {
-                    nchar.Add(j);
-                }
+                result.Add(match1.Groups[1].Value + match1.Groups[3].Value + match1.Groups[5].Value);
             }
-
-            if (nchar.Count > 1)
+            else if (match2.Success)
             {
-                strpl1 = str.Substring(0, nchar[0]);
-                strpl2 = str.Substring(nchar[0] + 1, (nchar[1] - nchar[0] - 1));
-                strpl3 = str.Substring(nchar[1] + 1, (str.Length - nchar[1] - 1));
-
-                str = GetStr(strpl1, strpl2, strpl3);
-
-                output.Add(str);
-                
+                result.Add(match2.Groups[5].Value + match2.Groups[3].Value + match2.Groups[1].Value);
             }
-            else
+            else if (match3.Success)
             {
-                nchar.Clear();
-                continue;
-            }
-            
-            //Console.WriteLine(str);
-            nchar.Clear();
+                result.Add(match3.Groups[5].Value + match3.Groups[1].Value + match3.Groups[3].Value);
+            }   
         }
-
-        return output;
-
-        //throw new InvalidOperationException("Waiting to be implemented.");
+        return result;
     }
-
-    public static string GetStr(string str1, string str2, string str3)
+    public static void Main(string[] args)
     {
-        string str;
-        if (int.Parse(str1) > 31)
-        {
-            if (int.Parse(str2) > 12)
-            {
-                str = str1 + str3 + str2;
-            }
-            else
-            {
-                str = str1 + str2 + str3;
-            }
-        }
-        else if (int.Parse(str3) > 31)
-        {
-            if (int.Parse(str2) > 12)
-            {
-                str = str3 + str1 + str2;
-            }
-            else
-            {
-                str = str3 + str2 + str1;
-            }
-        }
-        else
-        {
-            if (int.Parse(str3) > 12)
-            {
-                str = str2 + str1 + str3;
-            }
-            else
-            {
-                str = str2 + str3 + str1;
-            }
-        }
-
-        return str;
+        var dates = new List<string> { "2010/02/20", "19/12/2016", "11-18-2012", "20130720", "10-30-2012" };
+        DateTransform.TransformDateFormat(dates).ForEach(Console.WriteLine);
     }
 }
-
-
