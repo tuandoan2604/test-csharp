@@ -64,20 +64,30 @@ where DateKey = (
 )
 
 --Inventory ex6
-select
-EnglishProductName as ProductName, 
-ModelName, 
-EnglishProductCategoryName as ProductCategoryName, 
-EnglishProductSubcategoryName as ProductSubcategoryName,
-UnitsBalance,
-UnitCost 
-from DimProductCategory as dpc
-join DimProductSubcategory as dps on dpc.ProductCategoryKey = dps.ProductCategoryKey
-join DimProduct as dp on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
-join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
-where DateKey = (
-	select max(DateKey) from FactProductInventory
-)
+select 
+	ProductName, 
+	ModelName,
+	EnglishProductCategoryName as ProductCategoryName,
+	EnglishProductSubcategoryName as ProductSubcategoryName,
+	UnitsBalance,
+	UnitCost
+from (
+	select
+		EnglishProductName as ProductName, 
+		ModelName,
+		UnitsBalance,
+		UnitCost,
+		ProductSubcategoryKey
+	from DimProduct as dp 
+	join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
+	where DateKey = 
+		(
+			select max(DateKey) from FactProductInventory
+		)
+	and ProductSubcategoryKey is not null
+	) as sub 
+join DimProductSubcategory as dps on sub.ProductSubcategoryKey = dps.ProductSubcategoryKey
+join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKey
 order by UnitCost desc
 
 --Internet Sales ex8
@@ -97,6 +107,22 @@ join DimCustomer as dc on fis.CustomerKey = dc.CustomerKey
 join DimProduct as dp on fis.ProductKey = dp.ProductKey
 where dp.EnglishProductName = 'Road-150 Red, 48'
 
+
+select
+EnglishProductName as ProductName, 
+ModelName, 
+EnglishProductCategoryName as ProductCategoryName, 
+EnglishProductSubcategoryName as ProductSubcategoryName,
+UnitsBalance,
+UnitCost 
+from DimProductCategory as dpc
+join DimProductSubcategory as dps on dpc.ProductCategoryKey = dps.ProductCategoryKey
+join DimProduct as dp on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
+join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
+where DateKey = (
+	select max(DateKey) from FactProductInventory
+)
+order by UnitCost desc
 --Internet Sales ex9
 select
 FullName,
