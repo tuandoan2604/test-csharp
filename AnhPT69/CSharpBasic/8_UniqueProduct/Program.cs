@@ -1,43 +1,41 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-
-using System.Runtime.Serialization.Formatters;
-
-string[] str = new string[] { "Apple", "Computer", "Apple", "Bag" };
-string result = UniqueProduct.FirstUniqueProduct(str);
-Console.WriteLine("Result: " + result);
-Console.ReadLine();
-
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class UniqueProduct
 {
     public static string FirstUniqueProduct(string[] products)
     {
-        int n = products.Length;
-        string temp = "";
-        bool oke = false;
-        for (int i = 0; i < n; i++)
+        Dictionary<string, int> countMap = new Dictionary<string, int>();
+        
+        string result = string.Empty;
+
+        foreach (string pro in products)
         {
-            temp = products[i];
-            for (int j = i + 1; j < n; j++)
+            if (countMap.ContainsKey(pro))
             {
-                if (products[j] == temp)
-                {
-                    break;
-                }
-                else if (j == n - 1) {
-                    oke = true;
-                }
-
+                countMap[pro]++;
             }
-            if (oke)
+            else
             {
-                break;
-            }  
+                countMap.Add(pro, 1);
+            }
         }
-        return temp;
 
+        foreach (string pro in products)
+        {
+            if (countMap[pro] == 1)
+            {
+               result = pro;
+                break;
+            }
+        }
 
-        //throw new InvalidOperationException("Waiting to be implemented.");
+        return result;
+    }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(FirstUniqueProduct(new string[] { "Apple", "Computer", "Apple", "Bag" }));
     }
 }
