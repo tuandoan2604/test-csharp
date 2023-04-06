@@ -1,37 +1,30 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-
-int[] str = new int[] { 1, 3, 1, -1, 3 };
-Console.WriteLine("Result: " + InternalNodes.Count(str));
-Console.ReadLine();
-
-
+﻿using System;
+using System.Collections.Generic;
 
 public class InternalNodes
 {
     public static int Count(params int[] tree)
     {
         int n = tree.Length;
-        bool oke;
-        int j = 0;
-        List<int> Nodes = new List<int>();
+        Dictionary<int,int> Nodes = new Dictionary<int,int>();
 
-        for (int i = 0; i < n; i++) 
+        for (int i = 0; i < n; i++)
         {
-            oke = false;
-            j = 0;
-            while ((j < n) && (oke == false))
+            if (Nodes.ContainsKey(tree[i]))
             {
-                if (i == tree[j])
-                {
-                    oke = true;
-                    Nodes.Add(i);
-                }
-                j++;
+                Nodes[tree[i]]++;
             }
-            
+            else
+            {
+                Nodes.Add(tree[i], 1);
+            }    
+
         }
-        return Nodes.Count; //Hieu ngu vl
-        //throw new NotImplementedException("Waiting to be implemented.");
+        return Nodes.Count - 1;
+    }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(InternalNodes.Count(1, 3, 1, -1, 3, 6, -1, 8, 6, 5));
     }
 }
