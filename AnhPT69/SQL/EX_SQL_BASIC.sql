@@ -64,31 +64,57 @@ where DateKey = (
 )
 
 --Inventory ex6
-select 
+select top 10
 	ProductName, 
 	ModelName,
 	EnglishProductCategoryName as ProductCategoryName,
 	EnglishProductSubcategoryName as ProductSubcategoryName,
 	UnitsBalance,
-	UnitCost
+	UnitCost,
+	InventoryValue as 'InventoryValue = UnitsBalance * UnitCost'
 from (
 	select
 		EnglishProductName as ProductName, 
 		ModelName,
 		UnitsBalance,
 		UnitCost,
-		ProductSubcategoryKey
+		ProductSubcategoryKey,
+		(UnitCost * UnitsBalance) as InventoryValue
 	from DimProduct as dp 
 	join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
 	where DateKey = 
 		(
-			select max(DateKey) from FactProductInventory
+			select max(DateKey) from FactProductInventory 
 		)
-	and ProductSubcategoryKey is not null
 	) as sub 
 join DimProductSubcategory as dps on sub.ProductSubcategoryKey = dps.ProductSubcategoryKey
 join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKey
-order by UnitCost desc
+order by InventoryValue desc
+
+
+select 
+	EnglishProductName as ProductName, 
+	ModelName,
+	EnglishProductCategoryName as ProductCategoryName,
+	EnglishProductSubcategoryName as ProductSubcategoryName,
+	UnitsBalance,
+	UnitCost,
+	InventoryValue as 'InventoryValue = UnitsBalance * UnitCost',
+	MAX(DateKey) as DateKey
+from FactProductInventory as fpi_1
+join 
+	(
+	select 
+		ProductKey, 
+		max(UnitCost*UnitsBalance) AS InventoryValue 
+	from FactProductInventory 
+	group by ProductKey) as fpi_2 
+on fpi_1.ProductKey = fpi_2.ProductKey and fpi_1.UnitCost*fpi_1.UnitsBalance = fpi_2.InventoryValue
+join DimProduct as dp on dp.ProductKey = fpi_1.ProductKey
+left join DimProductSubcategory as dps on dps.ProductSubcategoryKey = dp.ProductSubcategoryKey
+left join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKey
+group by EnglishProductName, ModelName, EnglishProductCategoryName, EnglishProductSubcategoryName, fpi_1.UnitCost, fpi_1.UnitsBalance, InventoryValue
+order by InventoryValue desc
 
 --Internet Sales ex8
 select
