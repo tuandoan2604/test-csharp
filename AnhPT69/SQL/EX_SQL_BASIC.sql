@@ -92,7 +92,7 @@ join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKe
 order by InventoryValue desc
 
 
-select 
+select top 10
 	EnglishProductName as ProductName, 
 	ModelName,
 	EnglishProductCategoryName as ProductCategoryName,
