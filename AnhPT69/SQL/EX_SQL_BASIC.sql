@@ -47,73 +47,49 @@ for OrganizationName in (France, Germany, Australia)
 ) as PiVotTable
 
 --Inventory ex5
-select
-dp.ProductKey, 
-EnglishProductName as ProductName, 
-ModelName, 
-EnglishProductCategoryName as ProductCategoryName, 
-EnglishProductSubcategoryName as ProductSubcategoryName,
-UnitsBalance,
-UnitCost 
-from DimProductCategory as dpc
-join DimProductSubcategory as dps on dpc.ProductCategoryKey = dps.ProductCategoryKey
-join DimProduct as dp on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
-join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
-where DateKey = (
-	select max(DateKey) from FactProductInventory
-)
+select 
+	fpi_1.ProductKey,
+	EnglishProductName as ProductName, 
+	ModelName, 
+	EnglishProductCategoryName as ProductCategoryName, 
+	EnglishProductSubcategoryName as ProductSubcategoryName,
+	UnitsBalance, 
+	UnitCost  from FactProductInventory as fpi_1
+join (
+	select 
+		ProductKey, 
+		MAX(MovementDate) as LatestDate 
+	from FactProductInventory
+	group by ProductKey) as fpi_2 
+on fpi_1.ProductKey = fpi_2.ProductKey and fpi_1.MovementDate = fpi_2.LatestDate
+join DimProduct as dp on fpi_1.ProductKey = dp.ProductKey
+left join DimProductSubcategory as dps on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
+left join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKey
+
 
 --Inventory ex6
 select top 10
-	ProductName, 
-	ModelName,
-	EnglishProductCategoryName as ProductCategoryName,
-	EnglishProductSubcategoryName as ProductSubcategoryName,
-	UnitsBalance,
-	UnitCost,
-	InventoryValue as 'InventoryValue = UnitsBalance * UnitCost'
-from (
-	select
-		EnglishProductName as ProductName, 
-		ModelName,
-		UnitsBalance,
-		UnitCost,
-		ProductSubcategoryKey,
-		(UnitCost * UnitsBalance) as InventoryValue
-	from DimProduct as dp 
-	join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
-	where DateKey = 
-		(
-			select max(DateKey) from FactProductInventory 
-		)
-	) as sub 
-join DimProductSubcategory as dps on sub.ProductSubcategoryKey = dps.ProductSubcategoryKey
-join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKey
-order by InventoryValue desc
-
-
-select top 10
+	fpi_1.ProductKey,
 	EnglishProductName as ProductName, 
 	ModelName,
 	EnglishProductCategoryName as ProductCategoryName,
 	EnglishProductSubcategoryName as ProductSubcategoryName,
 	UnitsBalance,
 	UnitCost,
-	InventoryValue as 'InventoryValue = UnitsBalance * UnitCost',
-	MAX(DateKey) as DateKey
+	InventoryValue
 from FactProductInventory as fpi_1
-join 
-	(
+join (
 	select 
 		ProductKey, 
-		max(UnitCost*UnitsBalance) AS InventoryValue 
-	from FactProductInventory 
+		SUM(UnitCost * UnitsBalance) as InventoryValue,
+		MAX(MovementDate) as LatestDate
+	from FactProductInventory
+	where UnitsBalance > 0
 	group by ProductKey) as fpi_2 
-on fpi_1.ProductKey = fpi_2.ProductKey and fpi_1.UnitCost*fpi_1.UnitsBalance = fpi_2.InventoryValue
-join DimProduct as dp on dp.ProductKey = fpi_1.ProductKey
-left join DimProductSubcategory as dps on dps.ProductSubcategoryKey = dp.ProductSubcategoryKey
+on fpi_1.ProductKey = fpi_2.ProductKey and fpi_1.MovementDate = fpi_2.LatestDate
+join DimProduct as dp on fpi_1.ProductKey = dp.ProductKey
+left join DimProductSubcategory as dps on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
 left join DimProductCategory as dpc on dpc.ProductCategoryKey = dps.ProductCategoryKey
-group by EnglishProductName, ModelName, EnglishProductCategoryName, EnglishProductSubcategoryName, fpi_1.UnitCost, fpi_1.UnitsBalance, InventoryValue
 order by InventoryValue desc
 
 --Internet Sales ex8
@@ -133,48 +109,34 @@ join DimCustomer as dc on fis.CustomerKey = dc.CustomerKey
 join DimProduct as dp on fis.ProductKey = dp.ProductKey
 where dp.EnglishProductName = 'Road-150 Red, 48'
 
-
-select
-EnglishProductName as ProductName, 
-ModelName, 
-EnglishProductCategoryName as ProductCategoryName, 
-EnglishProductSubcategoryName as ProductSubcategoryName,
-UnitsBalance,
-UnitCost 
-from DimProductCategory as dpc
-join DimProductSubcategory as dps on dpc.ProductCategoryKey = dps.ProductCategoryKey
-join DimProduct as dp on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
-join FactProductInventory as fpi on fpi.ProductKey = dp.ProductKey
-where DateKey = (
-	select max(DateKey) from FactProductInventory
-)
-order by UnitCost desc
 --Internet Sales ex9
-select
-FullName,
-SalesOrderNumber,
-CustomerKey,
-sum(TotalProductCost) as TotalOrderCost
+select top 20
+	CONCAT(dc.FirstName, ' ', dc.MiddleName, ' ', dc.LastName) AS FullName,
+	SalesOrderNumber,
+	dc.CustomerKey,
+	TotalOrderCost
 from
-(select
-SalesOrderNumber,
-SalesOrderLineNumber,
-TotalProductCost,
-CONCAT(dc.FirstName, ' ', dc.MiddleName, ' ', dc.LastName) AS FullName,
-dc.CustomerKey as CustomerKey,
-ProductKey
-from DimCustomer as dc
-join FactInternetSales as fis on fis.CustomerKey = dc.CustomerKey) as SubTable
-join DimProduct as dp on dp.ProductKey = SubTable.ProductKey
-group by SalesOrderNumber, FullName, CustomerKey
-order by SalesOrderNumber desc
+	(select
+		SalesOrderNumber,
+		CustomerKey,
+		Sum(TotalProductCost) as TotalOrderCost
+	from FactInternetSales
+	group by SalesOrderNumber, CustomerKey) as fis
+join DimCustomer as dc on fis.CustomerKey = dc.CustomerKey
+order by TotalOrderCost desc
 
 --Reseller Sales ex10
-select ResellerName, 
-frs.ResellerKey,
-sum(OrderQuantity) as TotalQuantity,
-sum(TotalProductCost) as TotalOrderCost
-from FactResellerSales as frs
-join DimReseller as dr on frs.ResellerKey = dr.ResellerKey
-group by ResellerName, frs.ResellerKey
+select top 10
+	ResellerName,
+	dr.ResellerKey,
+	TotalQuantity,
+	TotalOrderCost
+from
+	(select 
+		ResellerKey,
+		sum(OrderQuantity) as TotalQuantity,
+		sum(TotalProductCost) as TotalOrderCost
+	from FactResellerSales
+	group by  ResellerKey) as frs
+join DimReseller as dr on dr.ResellerKey = frs.ResellerKey
 order by TotalOrderCost desc
