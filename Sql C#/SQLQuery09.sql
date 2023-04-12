@@ -1,4 +1,4 @@
-select top 20 CONCAT(FirstName, ' ', MiddleName, ' ', LastName), a.SalesOrderNumber, a.CustomerKey, TotalOrderCost from FactInternetSales a
+select top 20 CONCAT(FirstName, ' ', MiddleName, ' ', LastName) as CustomerName, a.SalesOrderNumber, a.CustomerKey, TotalOrderCost from FactInternetSales a
 inner join DimCustomer b
 on a.CustomerKey = b.CustomerKey
 inner join
