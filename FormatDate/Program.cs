@@ -1,40 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class DateTransform
 {
     public static List<string> TransformDateFormat(List<string> dates)
     {
-        dynamic data, swap;
-        string[] dataTime = new string[3];
         List<string> result = new List<string>();
+        Regex date1 = new Regex(@"^\d{4}/\d{2}/\d{2}$");
+        Regex date2 = new Regex(@"^\d{2}/\d{2}/\d{4}$");
+        Regex date3 = new Regex(@"^\d{2}-\d{2}-\d{4}$");
+        string[] data = new string[3];
+        string swap = "";
         foreach(var item in dates)
         {
-            if (item.Contains("/"))
+            if (date1.IsMatch(item))
+            {
+                result.Add(String.Join("",item.Split("/")));
+                
+            }
+            else if (date2.IsMatch(item))
             {
                 data = item.Split("/");
-                if (data[0].Length == 4 && data[1].Length == 2 && data[2].Length == 2)
-                {
-                    result.Add(String.Join("", data));
-                }
-                else if (data[0].Length == 2 && data[1].Length == 2 && data[2].Length == 4)
-                {
-                    swap = data[0];
-                    data[0] = data[2];
-                    data[2] = swap;
-                    result.Add(String.Join("", data));    
-                }
+                swap = data[2];
+                data[2] = data[0];
+                data[0] = swap;
+                result.Add(String.Join("", data));
             }
-            else if (item.Contains("-"))
-            {
-                data = item.Split("-");
-                if (data[0].Length == 2 && data[1].Length == 2 && data[2].Length == 4)
-                {
-                    dataTime[0] = data[2];
-                    dataTime[1] = data[0];
-                    dataTime[2] = data[1];
-                    result.Add(String.Join("", dataTime));
-                }
+            else if(date3.IsMatch(item)) {
+                data[0] = item.Split("-")[2];
+                data[1] = item.Split("-")[0];
+                data[2] = item.Split("-")[1];
+                result.Add(String.Join("", data));
             }
         }
         return result;
